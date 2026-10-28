@@ -43,6 +43,14 @@
 | WebP | 最適化済み画像フォーマット |
 | Python (Pillow) | 画像最適化・サムネイル生成スクリプト |
 
+## 設定とデプロイ
+
+`Map/js/config.js` は Git に含めません。ローカルでは `Map/js/config.example.js` をコピーして設定します。キーには利用するサイトと API の制限を設定してください。
+
+Cloudflare Pages のビルドコマンドは `node scripts/build-config.js` です。環境変数 `MAPTILER_KEY`、`GOOGLE_SHEETS_KEY`、`GTAG_ID` を設定すると、ビルド時に `Map/js/config.js` が生成されます。生成された値はブラウザーに配信されるため、秘密にはできません。本番ドメインのみを許可したキーはプレビュー URL やローカルでは使えません。
+
+過去の Git 履歴から既存の値は自動的には消えません。旧キーの利用制限と無効化は発行元で行います。
+
 ## Licence
 
 All Rights Reserved

@@ -42,3 +42,6 @@ manual.md
 # **/thumbs/
 
 contact_form_guide.md   
+
+# Browser configuration is generated for deployments or supplied locally.
+/Map/js/config.js
